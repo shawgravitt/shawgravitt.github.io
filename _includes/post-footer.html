@@ -1,0 +1,41 @@
+<footer>
+  <div>
+  {% if page.previous %}
+    <article class="excerpt">
+      <header>
+        <h2><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h2>
+      </header>
+      <section>
+        {% if page.preiuous.featured_image %}
+          <img src="/images/{{ page.previous.featured_image }}" class="fit image" alt="{{page.previous.title}}">
+        {% endif %}
+        {{ page.previous.content | truncatewords: 50, '...' }}
+      </section>
+      <footer>
+        <ul class="actions">
+          <li><a href="{{ page.previous.url }}" class="button">Read More</a></li>
+        </ul>
+      </footer>
+    </article>
+  {% endif %}
+
+  {% if page.next %}
+    <article class="excerpt">
+      <header>
+        <h2><a href="{{ page.next.url }}">{{ page.next.title }}</a></h2>
+      </header>
+      <section>
+        {% if page.next.featured_image %}
+          <img src="/images/{{ page.next.featured_image }}" class="fit image" alt="{{page.next.title}}">
+        {% endif %}
+        {{ page.next.content | markdownify | truncatewords: 50, '...' }}
+      </section>
+      <footer>
+        <ul class="actions">
+          <li><a href="{{ page.next.url }}" class="button">Read More</a></li>
+        </ul>
+      </footer>
+    </article>
+  {% endif %}
+  </div>
+</footer>

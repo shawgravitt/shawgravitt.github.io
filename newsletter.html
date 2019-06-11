@@ -1,0 +1,25 @@
+---
+layout: page
+title: Newsletter
+navigation_weight: 1
+---
+
+<img src="https://eep.io/mc-gallery/3a29d6ed454ccdcda69a438f5/images/0935ecc9-594a-4513-b15a-2fa351abe4d2.gif" alt="">
+
+{% include newsletter-text.html %}
+{% include mc-signup-form.html %}
+
+
+
+<section>
+  <h3>
+    Previous Posts
+  </h3>
+  <ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>

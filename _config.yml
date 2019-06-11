@@ -1,0 +1,46 @@
+locale: "en-US"
+title: Shaw Gravitt # Title of your site
+url: "" # the base hostname & protocol for your site
+baseurl: "jekyll-site" # the subpath of your site, e.g. /blog/
+google_analytics_key: ""
+
+# Default description in social shares for the jekyll-seo-tag gem
+description: > # this means to ignore newlines until "baseurl:"
+  Shaw Gravitt writer, Shopify developer
+
+# Author details for the jekyll-seo-tag gem
+author:
+  name: Shaw Gravitt
+  email: smgravitt@gmail.com
+  twitter: shawgravitt # twitter username without the @ symbol
+
+# Social details for the jekyll-seo-tag gem
+social:
+  name: Shaw Gravitt writer
+  links:
+    - https://github.com/comfusion/strata-reloaded-jekyll-template
+
+permalink: pretty
+
+sass:
+  style: compressed
+
+gems:
+  - "jekyll-feed"
+  - "jekyll-seo-tag"
+  - "jekyll-paginate"
+  - "jekyll-sitemap"
+
+# Jekyll SEO Tag
+webmaster_verifications:
+  google: # 1234
+  bing: # 1234
+  alexa: # 1234
+  yandex: # 1234
+
+
+
+
+
+
+

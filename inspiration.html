@@ -1,0 +1,32 @@
+---
+layout: page
+title: Inspiration
+navigation_weight: 3
+---
+
+<section>
+  {% for category in site.categories %}
+    {% for post in site.categories.inspiration %}
+      <div class="index-post">
+        <header>
+          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+        </header>
+        <section>
+          {% if post.featured_image %}
+            <img src="/images/{{ post.featured_image }}" class="fit image" alt="{{post.title}}">
+          {% endif %}
+
+          {{ post.content | truncatewords: 150, '...' }}
+
+          <div class="actions">
+            <a href="{{ post.url }}" class="button">Read More</a>
+          </div>
+        </section>
+      </div>
+      {% if forloop.first %}
+        {% include newsletter.html %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</section>

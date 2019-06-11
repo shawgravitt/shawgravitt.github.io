@@ -1,0 +1,16 @@
+<ul class="icons">
+  {% for account in site.data.social %}
+    <li>
+      <a {% if account.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=account.link %}" {% if account.social_icon %}class="icon {% if account.social_icon contains 'RSS' %} fas fa-rss {% else %} fab fa-{{ account.social_icon | slugify }}{% endif %}"{% endif %} rel="noreferrer">
+        <span class="label visually-hidden">{{ account.name }}</span>
+      </a>
+    </li>
+  {% endfor %}
+  {% if site.author.email %}
+  <li>
+    <a href="mailto:{{ site.author.email }}" class="icon far fa-envelope">
+      <span class="label visually-hidden">Email</span>
+    </a>
+  </li>
+  {% endif %}
+</ul>

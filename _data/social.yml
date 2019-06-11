@@ -1,0 +1,26 @@
+- name: Instagram
+  link: 'https://www.instagram.com/shawncemccraken/'
+  social_icon: Instagram
+  new_window: true
+# - name: Patreon
+#   link: 'https://www.patreon.com/user?u=20293738'
+#   social_icon: Patreon
+#   new_window: true
+- name: Facebook
+  link: 'https://www.facebook.com/shaw.gravitt'
+  social_icon: Facebook
+  new_window: true
+- name: Twitter
+  link: 'https://twitter.com/shawgravitt'
+  social_icon: Twitter
+  new_window: true
+- name: RSS
+  link: '/feed.xml'
+  social_icon: RSS
+  new_window: true
+
+
+
+
+
+  

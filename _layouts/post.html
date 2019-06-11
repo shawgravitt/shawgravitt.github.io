@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<article>
+  <header>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">
+      {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+    </p>
+  </header>
+
+  <section id="article-content">
+    {% if page.featured_image %}
+      <img src="/images/{{ page.featured_image }}" class="fit image featured-image" alt="{{page.title}}">
+    {% endif %}
+    {% if page.image_credit %}
+      <span>
+        <small>
+        {{ page.image_credit | markdownify }}
+        </small>
+      </span>
+    {% endif %}
+
+    {{ content }}
+  </section>
+
+  {% include post-footer.html %}
+</article>
+
