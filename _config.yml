@@ -1,12 +1,12 @@
 locale: "en-US"
 title: Shaw Gravitt # Title of your site
-url: "" # the base hostname & protocol for your site
-baseurl: "jekyll-site" # the subpath of your site, e.g. /blog/
+url: "jekyll-site" # the base hostname & protocol for your site
+baseurl: "/" # the subpath of your site, e.g. /blog/
 google_analytics_key: ""
 
 # Default description in social shares for the jekyll-seo-tag gem
 description: > # this means to ignore newlines until "baseurl:"
-  Shaw Gravitt writer, Shopify developer
+  Shaw Gravitt writer, father, web developer
 
 # Author details for the jekyll-seo-tag gem
 author:
