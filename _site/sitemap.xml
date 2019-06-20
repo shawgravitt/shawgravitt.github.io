@@ -24,6 +24,9 @@
 <loc>http://localhost:4000/jekyll-site/newsletter/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/jekyll-site/portfolio/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/jekyll-site/stories/</loc>
 </url>
 </urlset>
