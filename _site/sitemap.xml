@@ -31,6 +31,9 @@
 <loc>http://localhost:4000/blog/portfolio/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/blog/safe-sender/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/blog/stories/</loc>
 </url>
 </urlset>

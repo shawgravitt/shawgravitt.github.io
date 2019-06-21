@@ -1,5 +1,5 @@
 locale: "en-US"
-title: Shaw Gravitt # Title of your site
+title: Shaw Gravitt - Writing. Thinking. Living. # Title of your site
 url: "" # the base hostname & protocol for your site
 baseurl: "/blog" # the subpath of your site, e.g. /blog/
 google_analytics_key: ""
@@ -18,7 +18,7 @@ author:
 social:
   name: Shaw Gravitt writer
   links:
-    - https://github.com/comfusion/strata-reloaded-jekyll-template
+    
 
 permalink: pretty
 
