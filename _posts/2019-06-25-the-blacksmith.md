@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Blacksmith"
-date:   2019-06-25 08:08:08 -0400
+date:   2019-06-25 05:00:00 -0400
 categories: stories
 permalink: /:categories/:title
 featured_image: the-blacksmith.jpg

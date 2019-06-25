@@ -229,7 +229,7 @@ input[type="button"],
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(37,64,64,0.3);
+    background: rgba(37,64,64,0.5);
   }
   @media #{$tablet} {
     position: relative;
@@ -309,7 +309,8 @@ input[type="button"],
     padding: 2.5rem 2.5rem 0 2.5rem;
   }
   @media #{$mobile} {
-    padding: 2rem 0.75rem 0 0.75rem;
+    padding: 0.25rem 0.75rem 0 0.75rem;
+    bottom: 2rem;
   }
 }
 
@@ -329,9 +330,12 @@ input[type="button"],
     margin: 4rem 0 0 0;
     padding: 4rem 0 0 0;
     &:first-child {
-      border-top: 0;
+      border-top: none;
       margin-top: 0;
       padding-top: 0;
+    }
+    @media #{$mobile} {
+      border-top: none;
     }
   }
   @media #{$tablet} {
@@ -339,6 +343,15 @@ input[type="button"],
   }
   @media #{$mobile} {
     padding: 2rem;
+  }
+}
+
+article:not(.excerpt) {
+  >footer {
+    border-top: solid 2px #efefef;
+    @media #{$mobile} {
+      border-top: none;
+    }
   }
 }
 
@@ -807,20 +820,6 @@ dl {
   body.is-touch .poptrox-popup .closer {
     opacity: 1.0 !important;
   }
-
-/* Medium */
-
-@media screen and (max-width: 980px) {
-
-  /* Main */
-
-  #main {
-    margin: 0;
-    padding: 6em 4em;
-    width: 100%;
-  }
-
-}
 
 
 /* XSmall */
