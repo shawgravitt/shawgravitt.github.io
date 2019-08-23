@@ -173,7 +173,7 @@ Three guards stood in front of the gate waiting for me and the two other guards 
 
 The small door slid open. I didn’t know what to expect to see on the other side, but I did not anticipate seeing the High Judge standing in a small room. The fifth guard–the one who opened the gate–escorted me in but remained outside with the other four guards. Inside was a table with jugs of water, a stack of freeze-dried food packs, and a large knife.
 
-“This is all I the help I can offer you,” the High Judge said. “Once you are on the other side of The Wall you will be on your own. We may be unable to support you, but we want you to survive.”
+“This is all the help I can offer you,” the High Judge said. “Once you are on the other side of The Wall you will be on your own. We may be unable to support you, but we want you to survive.”
 
 I put my hand on one of the jugs of water. I was thankful for the supplies, but concerned I would be unable to carry everything.
 
