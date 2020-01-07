@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section>
-  {% for post in site.posts limit: 2 %}
+  {% for post in site.posts %}
     <div class="index-post">
       <header>
         <h1><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h1>
@@ -27,7 +27,7 @@ layout: default
   {% endfor %}
 </section>
 
-<section>
+<!-- <section>
   {% for post in site.posts offset: 2 limit: 2 %}
     <article class="excerpt">
       <header>
@@ -46,4 +46,4 @@ layout: default
       </footer>
     </article>
   {% endfor %}
-</section>
+</section> -->

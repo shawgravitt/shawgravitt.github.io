@@ -1,9 +1,10 @@
 <footer>
+  <h2>Other stories you'll love</h2>
   <div>
   {% if page.previous %}
     <article class="excerpt">
       <header>
-        <h2><a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a></h2>
+        <h3><a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a></h3>
       </header>
       <section>
         {% if page.previous.featured_image %}
@@ -22,7 +23,7 @@
   {% if page.next %}
     <article class="excerpt">
       <header>
-        <h2><a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a></h2>
+        <h3><a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a></h3>
       </header>
       <section>
         {% if page.next.featured_image %}
