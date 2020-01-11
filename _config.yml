@@ -38,7 +38,7 @@ webmaster_verifications:
   yandex: # 1234
 
 
-
+include: [".well-known"]
 
 
 
