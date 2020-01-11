@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: shawgravitt.com
+Token: 9ef20b5fdf826da85e6378039b61a33cec2a91c6884b54c3dca2a25269ea653d
