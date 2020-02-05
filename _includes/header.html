@@ -1,0 +1,65 @@
+<header id="header">
+  <div class="nav-bar">
+    {% include site-nav.html %}
+    {% include social-icons.html %}
+  </div>
+  
+  {% if page.url == "/" %}
+    <div class="header-content">
+      <h1 class="title">
+        {{ page.title | default: "Shaw Gravitt" }}
+      </h1>
+      <h2>
+        <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, I&#39;m Shaw.", "I write stories.", "Fictional stories...", "About the near future.", "Enjoy!" ]'>
+          <span class="wrap"></span>
+        </a>
+      </h2>
+    </div>
+  {% endif %}
+
+</header>
+
+
+<style>
+
+  #header {
+    padding: 60px 25px 0 25px;
+    background: {{ site.colors.dark }};
+    position: relative;
+    max-height: 300px;
+    {% if page.url == "/" %}
+      height: 350px;
+    {% endif %}
+  }
+
+  #header * {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #header a:hover {
+    color: {{ site.colors.light }};
+  }
+  #header a.active {
+    color: {{ site.colors.light }};
+  }
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    background: {{ site.colors.dark }};
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    white-space: nowrap;
+    -ms-overflow-x: auto;
+        overflow-x: auto;
+  }
+  .header-content {
+    margin: auto;
+    text-align: center;
+    {% unless page.url == "/" %}
+      padding: 50px 0;
+    {% endunless %}
+  }
+</style>

@@ -1,0 +1,35 @@
+<aside>
+  <div class="sidebar-content">
+    <img src="{{ 'images/avatar.png' | relative_url }}" alt="This is me.">
+    <h4>
+      Hi! I'm Shaw Gravitt. I write stories and build <a href="{{ '/portfolio' | relative_url }}">Shopify sites</a>. Click the button below and I'll let you know when I write a new story.
+    </h4>
+
+    <a href="{{ '/newsletter' | relative_url }}" class="button">
+      Sign up for Updates
+    </a>
+  </div>
+
+</aside>
+
+<style>
+  aside {
+    padding-top: 30px;
+    color: {{ site.colors.dark }};
+  }
+
+  .sidebar-content {
+    top: 90px;
+    position: sticky;
+  }
+
+  .sidebar-content h4 a {
+    border-bottom: 1px dotted;
+  }
+
+  aside img {
+    max-width: 50px;
+    margin-right: 10px;
+    float: left;
+  }
+</style>

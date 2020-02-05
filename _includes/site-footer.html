@@ -1,8 +1,39 @@
 <footer id="footer">
-  <div class="copyright">
-    <span>&copy; {{ site.time | date: '%Y' }}. Shaw Gravitt. All rights reserved.</span>
+  <div>
+    {% include site-nav.html %}
   </div>
-  <span style="font-size: 0.7rem">
-    any links to amazon are affiliate links to help pay for this site and emails I send out.
-  </span>
+  <div class="copyright">
+    <small>
+      <span>&copy; {{ site.time | date: '%Y' }}. Shaw Gravitt. All rights reserved.</span>
+    </small>
+  </div>
 </footer>
+
+
+<style>
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 25px 25px;
+    align-items: center;
+  }
+  #footer #site-nav {
+    margin-bottom: 0;
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+  #footer #site-nav li {
+    font-size: 0.8em
+  }
+  #footer .nav-site-title {
+    display: none;
+  }
+  @media (max-width: 500px) {
+    #footer {
+      display: block;
+    }
+  }
+  .copyright {
+    text-align: right;
+  }
+</style>

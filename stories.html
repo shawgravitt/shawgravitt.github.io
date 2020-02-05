@@ -24,7 +24,9 @@ navigation_weight: 2
         </section>
       </div>
       {% if forloop.first %}
-        {% include newsletter.html %}
+        <div style="margin-top: 25px; ">
+          {% include newsletter.html %}
+        </div>
       {% endif %}
     {% endfor %}
 </section>

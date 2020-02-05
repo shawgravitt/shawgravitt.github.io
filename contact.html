@@ -26,3 +26,35 @@ navigation_weight: 4
     <input class="button" type="submit" value="Send">
   </form>
 </div>
+
+
+<style>
+  #contact-form {
+    max-width: 650px;
+    margin: auto;
+  }
+  #contact-form textarea {
+    margin-bottom: 20px;
+  }
+  .form-group {
+    width: 49.5%;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .form-group:last-of-type {
+    padding-left: 20px;
+  }
+
+  @media (max-width: 500px) {
+    .form-group {
+      width: 100%;
+    }
+    .form-group:last-of-type {padding-left: 0;}
+  }
+
+  hr {
+    border: 0;
+    border-bottom: solid 2px #efefef;
+    margin: 2em 0;
+  }
+</style>

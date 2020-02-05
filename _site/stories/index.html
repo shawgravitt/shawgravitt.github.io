@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Shaw Gravitt - Writing. Thinking. Living.</title>
+		<title>Shaw Gravitt Writes - Stories of near future fiction.</title>
 		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Shaw Gravitt">
-		<meta name="description" content="Shaw Gravitt - writer & web developer
+		<meta name="description" content="Shaw Gravitt - writer of near future fiction stories.
 ">
 		<meta http-equiv="content-language" content="en-US" />
 		<meta name="generator" content="Jekyll v3.8.5">
@@ -20,152 +20,259 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
 
     <!-- Begin Jekyll SEO tag v2.1.0 -->
-<title>Stories - Shaw Gravitt - Writing. Thinking. Living.</title>
+<title>Stories - Shaw Gravitt Writes - Stories of near future fiction.</title>
 <meta property="og:title" content="Stories" />
-<meta name="description" content="Shaw Gravitt - writer &amp; web developer" />
-<meta property="og:description" content="Shaw Gravitt - writer &amp; web developer" />
+<meta name="description" content="Shaw Gravitt - writer of near future fiction stories." />
+<meta property="og:description" content="Shaw Gravitt - writer of near future fiction stories." />
 <link rel="canonical" href="http://localhost:4000/stories/" />
 <meta property="og:url" content="http://localhost:4000/stories/" />
-<meta property="og:site_name" content="Shaw Gravitt - Writing. Thinking. Living." />
+<meta property="og:site_name" content="Shaw Gravitt Writes - Stories of near future fiction." />
 <script type="application/ld+json">
 {"@context": "http://schema.org",
 "@type": "WebPage",
 "headline": "Stories",
-"description": "Shaw Gravitt - writer &amp; web developer",
+"description": "Shaw Gravitt - writer of near future fiction stories.",
 "url": "http://localhost:4000/stories/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000//feed.xml" title="Shaw Gravitt - Writing. Thinking. Living." />
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000//feed.xml" title="Shaw Gravitt Writes - Stories of near future fiction." />
 
 	</head>
 
 	<body id="top">
-    <div id="sidebar">
       <header id="header">
-        <h1 class="title">
-          <a href="//" class="avatar">
-            <img src="/images/avatar.png" alt="">
-            <span class="label visually-hidden">Shaw Gravitt</span>
-            </a>
-        </h1>
-        <h2>
-          Hi! I'm Shaw Gravitt. I write stories and build <a style="text-decoration: underline dotted;" href="/portfolio">Shopify sites</a>. These are some stories I've written and a few other things.
-        </h2>
-        
-        <ul>
-  
-  
-    
-  
-    
+  <div class="nav-bar">
+    <div id="site-nav">
+    <div class="nav-site-title">
+      <a href="/">
+        <img src="/images/shwgrvtt-logo.png" alt="Shaw Gravitt Writes">
+      </a>
+    </div>
+  <div class="site-nav-content">
+    <ul id="site-nav-list">
       
-    
-  
-    
-  
-    
-  
-    
-  
-    
+        <li><a href="/stories">Stories</a></li>
       
-    
-  
-    
-  
-    
+        <li><a href="/contact">Contact Me</a></li>
       
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-        <li>
-          <a class="sidebar-nav-item" href="/newsletter/">Newsletter</a>
-        </li>
-      
-    
-  
-    
-      
-        <li>
-          <a class="sidebar-nav-item active" href="/stories/">Stories</a>
-        </li>
-      
-    
-  
-    
-      
-        <li>
-          <a class="sidebar-nav-item" href="/inspiration/">Inspiration</a>
-        </li>
-      
-    
-  
-    
-      
-        <li>
-          <a class="sidebar-nav-item" href="/contact/">Contact</a>
-        </li>
-      
-    
-  
-</ul>
+    </ul>
+    <h2 class="nav-post-title">
+      Stories
+    </h2>
+  </div>
+</div>
 
-        <ul class="icons">
+<style>
+  #site-nav {
+    display: grid;
+    align-items: center;
+    padding-left: 25px;
+    grid-template-columns: 0.5fr 4fr;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+  }
+  #site-nav::-webkit-scrollbar {
+    display: none;
+  }
+  #site-nav a {
+    border: none;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+  }
+  #site-nav a:before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 0px;
+    height: 2px;
+    margin: 2px 0 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.5s;
+    opacity: 0;
+    background-color: #ffffff;
+  }
+  #site-nav a:hover {
+    left: 0;
+  }
+  #site-nav a:hover:before{
+    width: 100%;
+    opacity: 1;
+  }
+  #site-nav li {
+    list-style: none;
+    line-height: 1;
+    text-align: center;
+    grid-row: 1;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    margin: 0 8px;
+  }
+  #site-nav-list {
+    display: grid;
+    align-items: center;
+    padding-left: 0;
+    grid-template-columns: repeat(3, max-content);
+  }
+
+  .site-nav-content {
+    position: relative;
+  }
+  .nav-site-title {
+    max-width: 70px;
+  }
+
+  .nav-post-title {
+    visibility: hidden;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: none;
+    opacity: 0;
+    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translateY(175%);
+    margin: 0;
+  }
+
+  .nav-post-title-active #site-nav-list {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-175%);
+    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .nav-post-title-active .nav-post-title {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (max-width: 600px) {
+    #site-nav {
+      padding-left: 10px;
+      grid-template-columns: 1fr 2fr;
+    }
+    .nav-site-title, .nav-post-title {
+      font-size: 1em;
+    }
+    .nav-post-title {
+      top: 12px;
+    }
+    #site-nav li {
+      font-size: 0.9em;
+    }
+  }
+</style>
+
+
+
+
+    <ul class="social-icons">
   
-    <li>
+    <li class="social-item">
       <a target="_blank" href="https://www.instagram.com/shawncemccraken/" class="icon  fab fa-instagram" rel="noreferrer">
         <span class="label visually-hidden">Instagram</span>
       </a>
     </li>
   
-    <li>
-      <a target="_blank" href="https://www.facebook.com/shaw.gravitt" class="icon  fab fa-facebook" rel="noreferrer">
-        <span class="label visually-hidden">Facebook</span>
-      </a>
-    </li>
-  
-    <li>
+    <li class="social-item">
       <a target="_blank" href="https://twitter.com/shawgravitt" class="icon  fab fa-twitter" rel="noreferrer">
         <span class="label visually-hidden">Twitter</span>
       </a>
     </li>
   
-    <li>
-      <a target="_blank" href="//feed.xml" class="icon  fas fa-rss " rel="noreferrer">
-        <span class="label visually-hidden">RSS</span>
-      </a>
-    </li>
-  
-  
-  <li>
-    <a href="mailto:smgravitt@gmail.com" class="icon far fa-envelope">
-      <span class="label visually-hidden">Email</span>
-    </a>
+   <li>
+    <a class="button" href="/newsletter">Subscribe</a>
   </li>
-  
 </ul>
-      </header>
-      
-      <style>
-        #sidebar {
-          
-            background-image: url("/images/bg.jpg");
-          
-        }
-      </style>
-      
-    </div>
+
+<style>
+  .social-icons {
+    text-align: right;
+    padding-right: 25px;
+    white-space: nowrap;
+  }
+  .social-icons li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px 0 0;
+  }
+  .social-icons li a {
+    font-size: 22px;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .social-icons .button  {
+    font-size: 1em;
+    margin: 0;
+    min-width: auto;
+    padding: 0 7px;
+    margin: 0;
+    height: auto;
+    line-height: 1.5;
+    border-width: 1px;
+    border-bottom: 1px solid;
+  }
+
+  @media (max-width: 750px) {
+    .social-icons {
+      padding: 0;
+    }
+    li.social-item {
+      display: none;
+    }
+  }
+</style>
+  </div>
+  
+  
+
+</header>
 
 
+<style>
+
+  #header {
+    padding: 60px 25px 0 25px;
+    background: #313b3f;
+    position: relative;
+    max-height: 300px;
+    
+  }
+
+  #header * {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #header a:hover {
+    color: #ffffff;
+  }
+  #header a.active {
+    color: #ffffff;
+  }
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    background: #313b3f;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    white-space: nowrap;
+    -ms-overflow-x: auto;
+        overflow-x: auto;
+  }
+  .header-content {
+    margin: auto;
+    text-align: center;
+    
+      padding: 50px 0;
+    
+  }
+</style>
     <div id="main">
       <section>
     
@@ -187,7 +294,8 @@
         </section>
       </div>
       
-        <div id="newsletter">
+        <div style="margin-top: 25px; ">
+          <div id="newsletter">
   <h2>Sign up for Updates</h2>
 <p>
   If you're into my stories, sign up for my email list below and I'll send you the new posts right when they come out. That’s the only thing I use the list for–and since my posting schedule isn’t exactly…regular…this is the best way to stay up-to-date with my posts.
@@ -217,6 +325,34 @@
   
 <!--End mc_embed_signup-->
 </div>
+
+<style>
+  #newsletter {
+    border-top: 2px solid #254040;
+    border-bottom: 2px solid #254040;
+    padding: 30px 50px 0 50px;
+    
+  }
+
+  .mc-field-group {
+    display: inline-block;
+    width: 65%;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    vertical-align: top;
+  }
+
+  @media (max-width: 500px) {
+    #newsletter {
+      padding: 30px 15px 0 15px;
+    }
+    .mc-field-group {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+</style>
+        </div>
       
     
       <div class="index-post">
@@ -318,20 +454,185 @@
     </div>
 
     <footer id="footer">
-  <div class="copyright">
-    <span>&copy; 2020. Shaw Gravitt. All rights reserved.</span>
+  <div>
+    <div id="site-nav">
+    <div class="nav-site-title">
+      <a href="/">
+        <img src="/images/shwgrvtt-logo.png" alt="Shaw Gravitt Writes">
+      </a>
+    </div>
+  <div class="site-nav-content">
+    <ul id="site-nav-list">
+      
+        <li><a href="/stories">Stories</a></li>
+      
+        <li><a href="/contact">Contact Me</a></li>
+      
+    </ul>
+    <h2 class="nav-post-title">
+      Stories
+    </h2>
   </div>
-  <span style="font-size: 0.7rem">
-    any links to amazon are affiliate links to help pay for this site and emails I send out.
-  </span>
+</div>
+
+<style>
+  #site-nav {
+    display: grid;
+    align-items: center;
+    padding-left: 25px;
+    grid-template-columns: 0.5fr 4fr;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+  }
+  #site-nav::-webkit-scrollbar {
+    display: none;
+  }
+  #site-nav a {
+    border: none;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+  }
+  #site-nav a:before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 0px;
+    height: 2px;
+    margin: 2px 0 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.5s;
+    opacity: 0;
+    background-color: #ffffff;
+  }
+  #site-nav a:hover {
+    left: 0;
+  }
+  #site-nav a:hover:before{
+    width: 100%;
+    opacity: 1;
+  }
+  #site-nav li {
+    list-style: none;
+    line-height: 1;
+    text-align: center;
+    grid-row: 1;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    margin: 0 8px;
+  }
+  #site-nav-list {
+    display: grid;
+    align-items: center;
+    padding-left: 0;
+    grid-template-columns: repeat(3, max-content);
+  }
+
+  .site-nav-content {
+    position: relative;
+  }
+  .nav-site-title {
+    max-width: 70px;
+  }
+
+  .nav-post-title {
+    visibility: hidden;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: none;
+    opacity: 0;
+    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translateY(175%);
+    margin: 0;
+  }
+
+  .nav-post-title-active #site-nav-list {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-175%);
+    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .nav-post-title-active .nav-post-title {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (max-width: 600px) {
+    #site-nav {
+      padding-left: 10px;
+      grid-template-columns: 1fr 2fr;
+    }
+    .nav-site-title, .nav-post-title {
+      font-size: 1em;
+    }
+    .nav-post-title {
+      top: 12px;
+    }
+    #site-nav li {
+      font-size: 0.9em;
+    }
+  }
+</style>
+
+
+
+
+  </div>
+  <div class="copyright">
+    <small>
+      <span>&copy; 2020. Shaw Gravitt. All rights reserved.</span>
+    </small>
+  </div>
 </footer>
+
+
+<style>
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 25px 25px;
+    align-items: center;
+  }
+  #footer #site-nav {
+    margin-bottom: 0;
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+  #footer #site-nav li {
+    font-size: 0.8em
+  }
+  #footer .nav-site-title {
+    display: none;
+  }
+  @media (max-width: 500px) {
+    #footer {
+      display: block;
+    }
+  }
+  .copyright {
+    text-align: right;
+  }
+</style>
+
+<style>
+
+  #main {
+    padding: 0 20px;
+    margin: auto;
+    width: 100%;
+    max-width: 1260px;
+    
+      max-width: 960px;
+    
+  }
+</style>
+
 
     
 
 	</body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-   <script src="/js/main.js"></script>
-    <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/3a29d6ed454ccdcda69a438f5/a7b7f3961db5b054045043478.js");</script>
 </html>

@@ -1,11 +1,11 @@
 locale: "en-US"
-title: Shaw Gravitt - Writing. Thinking. Living. # Title of your site
+title: Shaw Gravitt Writes - Stories of near future fiction. # Title of your site
 url: "shawgravitt.com" # the base hostname & protocol for your site
 baseurl: "/" # the subpath of your site, e.g. /blog/
 
 # Default description in social shares for the jekyll-seo-tag gem
 description: > # this means to ignore newlines until "baseurl:"
-  Shaw Gravitt - writer & web developer
+  Shaw Gravitt - writer of near future fiction stories.
 
 # Author details for the jekyll-seo-tag gem
 author:
@@ -18,6 +18,10 @@ social:
   name: Shaw Gravitt writer
   links:
     
+colors:
+  light: "#ffffff"
+  dark: "#313b3f"
+  highlight: "#D95525"
 
 permalink: pretty
 
@@ -39,6 +43,14 @@ webmaster_verifications:
 
 
 include: [".well-known"]
+
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
 
 
 

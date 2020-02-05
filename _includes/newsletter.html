@@ -2,3 +2,30 @@
   {% include newsletter-text.html %}
   {% include mc-signup-form.html %}
 </div>
+
+<style>
+  #newsletter {
+    border-top: 2px solid #254040;
+    border-bottom: 2px solid #254040;
+    padding: 30px 50px 0 50px;
+    
+  }
+
+  .mc-field-group {
+    display: inline-block;
+    width: 65%;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    vertical-align: top;
+  }
+
+  @media (max-width: 500px) {
+    #newsletter {
+      padding: 30px 15px 0 15px;
+    }
+    .mc-field-group {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+</style>

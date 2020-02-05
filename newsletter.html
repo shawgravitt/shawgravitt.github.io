@@ -4,7 +4,7 @@ title: Newsletter
 navigation_weight: 1
 ---
 
-<img src="https://eep.io/mc-gallery/3a29d6ed454ccdcda69a438f5/images/0935ecc9-594a-4513-b15a-2fa351abe4d2.gif" alt="">
+<img style="margin: 25px auto; display: block;" src="https://eep.io/mc-gallery/3a29d6ed454ccdcda69a438f5/images/0935ecc9-594a-4513-b15a-2fa351abe4d2.gif" alt="">
 
 {% include newsletter-text.html %}
 {% include mc-signup-form.html %}
@@ -23,3 +23,21 @@ navigation_weight: 1
   {% endfor %}
   </ul>
 </section>
+
+
+<style>
+  .mc-field-group {
+    display: inline-block;
+    width: 65%;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    vertical-align: top;
+  }
+
+  @media (max-width: 500px) {
+    .mc-field-group {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+</style>

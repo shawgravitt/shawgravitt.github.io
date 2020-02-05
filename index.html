@@ -2,48 +2,31 @@
 layout: default
 ---
 
-<section>
-  {% for post in site.posts %}
-    <div class="index-post">
-      <header>
-        <h1><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h1>
-        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-      </header>
-      <section>
-        {% if post.featured_image %}
-          <img src="images/{{ post.featured_image }}" class="fit image" alt="{{post.title}}">
-        {% endif %}
 
-        {{ post.content | truncatewords: 150, '...' }}
 
-        <div class="actions">
-          <a href="{{ post.url | relative_url }}" class="button">Read More</a>
-        </div>
-      </section>
-    </div>
-    {% if forloop.first %}
-      {% include newsletter.html %}
-    {% endif %}
-  {% endfor %}
-</section>
+<div class="index-wrapper">
+  {% include post-card-rack.html %}
+  {% include small-about-me.html %}
+</div>
 
-<!-- <section>
-  {% for post in site.posts offset: 2 limit: 2 %}
-    <article class="excerpt">
-      <header>
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      </header>
-      <section>
-        {% if post.featured_image %}
-          <img src="images/{{ post.featured_image }}" class="fit image" alt="{{post.title}}">
-        {% endif %}
-        {{ post.content | truncatewords: 50, '...' }}
-      </section>
-      <footer>
-        <div class="actions">
-          <a href="{{ post.url | relative_url }}" class="button">Read More</a>
-        </div>
-      </footer>
-    </article>
-  {% endfor %}
-</section> -->
+
+<style>
+  .index-wrapper {
+    display: grid;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  @media (max-width: 770px) {
+    .index-wrapper {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+var TxtType=function(el,toRotate,period){this.toRotate=toRotate;this.el=el;this.loopNum=0;this.period=parseInt(period,10)||2000;this.txt='';this.tick();this.isDeleting=false};TxtType.prototype.tick=function(){var i=this.loopNum%this.toRotate.length;var fullTxt=this.toRotate[i];if(this.isDeleting){this.txt=fullTxt.substring(0,this.txt.length-1)}else{this.txt=fullTxt.substring(0,this.txt.length+1)}this.el.innerHTML='<span class="wrap">'+this.txt+'</span>';var that=this;var delta=200-Math.random()*100;if(this.isDeleting){delta/=2}if(!this.isDeleting&&this.txt===fullTxt){delta=this.period;this.isDeleting=true}else if(this.isDeleting&&this.txt===''){this.isDeleting=false;this.loopNum+=1;delta=500}setTimeout(function(){that.tick()},delta)};window.onload=function(){var elements=document.getElementsByClassName('typewrite');for(var i=0;i<elements.length;i+=1){var toRotate=elements[i].getAttribute('data-type');var period=elements[i].getAttribute('data-period');if(toRotate){new TxtType(elements[i],JSON.parse(toRotate),period)}}var css=document.createElement("style");css.type="text/css";css.innerHTML=".typewrite > .wrap { border-right: 0.08em solid rgba(255,255,255,0.8);}";document.body.appendChild(css)};
+</script>

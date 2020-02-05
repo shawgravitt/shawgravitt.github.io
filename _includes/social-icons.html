@@ -1,16 +1,51 @@
-<ul class="icons">
+<ul class="social-icons">
   {% for account in site.data.social %}
-    <li>
+    <li class="social-item">
       <a {% if account.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=account.link %}" {% if account.social_icon %}class="icon {% if account.social_icon contains 'RSS' %} fas fa-rss {% else %} fab fa-{{ account.social_icon | slugify }}{% endif %}"{% endif %} rel="noreferrer">
         <span class="label visually-hidden">{{ account.name }}</span>
       </a>
     </li>
   {% endfor %}
-  {% if site.author.email %}
-  <li>
-    <a href="mailto:{{ site.author.email }}" class="icon far fa-envelope">
-      <span class="label visually-hidden">Email</span>
-    </a>
+   <li>
+    <a class="button" href="{{ '/newsletter' | relative_url }}">Subscribe</a>
   </li>
-  {% endif %}
 </ul>
+
+<style>
+  .social-icons {
+    text-align: right;
+    padding-right: 25px;
+    white-space: nowrap;
+  }
+  .social-icons li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px 0 0;
+  }
+  .social-icons li a {
+    font-size: 22px;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .social-icons .button  {
+    font-size: 1em;
+    margin: 0;
+    min-width: auto;
+    padding: 0 7px;
+    margin: 0;
+    height: auto;
+    line-height: 1.5;
+    border-width: 1px;
+    border-bottom: 1px solid;
+  }
+
+  @media (max-width: 750px) {
+    .social-icons {
+      padding: 0;
+    }
+    li.social-item {
+      display: none;
+    }
+  }
+</style>

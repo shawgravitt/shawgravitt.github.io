@@ -2,15 +2,28 @@
 layout: default
 ---
 
-<article>
+{% include progress-bar.html %}
+
+<article id="article">
   <header>
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
-    </p>
+    <h1 class="title">
+      {{ page.title | default: "Shaw Gravitt" }}
+    </h1>
+    <div class="post-meta-wrapper">
+      <span class="post-meta">
+        {{ page.date | date: "%b %-d, %Y" }}
+      </span>
+      <span>|</span>
+      <span class="read-time">
+        {% capture words %}{{ page.content | number_of_words | minus: 230 }}{% endcapture %}
+        {% unless words contains '-' %}
+          {{ words | plus: 230 | divided_by: 230 | append: ' min read' }}
+        {% endunless %}
+      </span>
+    </div>
   </header>
 
-  <section id="article-content">
+  <div class="post-image">
     {% if page.featured_image %}
       <img src="../images/{{ page.featured_image }}" class="fit image featured-image" alt="{{page.title}}">
     {% endif %}
@@ -21,11 +34,14 @@ layout: default
         </small>
       </span>
     {% endif %}
+  </div>
 
+  <section id="article-content">
     <div class="content">
       {{ content }}
     </div>
-
+  </section>
+  <section id="closer">
     {% include newsletter.html %}
     
     <div class="support">
@@ -38,3 +54,97 @@ layout: default
   {% include post-footer.html %}
 </article>
 
+<style>
+  #article header {
+    margin-bottom: 25px;
+  }
+  .post-meta-wrapper {
+    font-size: 0.75em;
+  }
+  .post-meta-wrapper span {
+    margin-right: 10px;
+  }
+  #article-content {
+    max-width: 30em;
+    margin: 50px auto 100px auto;
+    font-size: 1.25em;
+    line-height: 1.75;
+  }
+  .featured-image {
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  blockquote {
+    border-left: solid 6px $blue-green;
+    font-style: italic;
+    margin: 0 0 2rem 2rem;
+    padding: 1rem 0 0.5rem 1.5rem;
+  }
+
+  .support {
+    margin-top: 50px;
+  }
+
+  .video-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    margin-bottom: 25px;
+    iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+    }
+  }
+
+
+</style>
+
+
+<script>
+  (function (window, document) {
+      // set up Gravy as a global object
+      if (!window.Gravy) {
+        window.Gravy = {};
+      }
+      window.Gravy.stickyNavTitle = function stickyNavTitle(options) {
+        var nav = document.querySelector(options.navSelector);
+        var title = document.querySelector(options.titleSelector);
+        var lastScrollY = window.scrollY;
+        var ticking = false;
+        function onScroll() {
+          lastScrollY = window.scrollY;
+          requestTick();
+        }
+        function requestTick() {
+          if (!ticking) {
+            requestAnimationFrame(update);
+          }
+          ticking = true;
+        }
+        function update() {
+          var trigger = title.getBoundingClientRect().top + window.scrollY;
+          var triggerOffset = title.offsetHeight - 60;
+
+          // show/hide post title
+          if (lastScrollY >= trigger + triggerOffset) {
+              nav.classList.add(options.activeClass);
+          } else {
+              nav.classList.remove(options.activeClass);
+          }
+          ticking = false;
+        }
+        window.addEventListener('scroll', onScroll, {passive: true});
+        update();
+      };
+  })(window, document);
+    Gravy.stickyNavTitle({
+      navSelector: '#site-nav',
+      titleSelector: '.title',
+      activeClass: 'nav-post-title-active'
+   });
+</script>

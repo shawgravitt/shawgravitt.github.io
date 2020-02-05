@@ -1,42 +1,27 @@
-<footer>
+<footer id="post-footer">
   <h2>Other stories you'll love</h2>
-  <div>
+  <div class="other-stories">
   {% if page.previous %}
-    <article class="excerpt">
-      <header>
-        <h3><a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a></h3>
-      </header>
-      <section>
-        {% if page.previous.featured_image %}
-          <img src="../images/{{ page.previous.featured_image }}" class="fit image" alt="{{page.previous.title}}">
-        {% endif %}
-        {{ page.previous.content | truncatewords: 50, '...' }}
-      </section>
-      <footer>
-        <ul class="actions">
-          <li><a href="{{ page.previous.url | relative_url }}" class="button">Read More</a></li>
-        </ul>
-      </footer>
-    </article>
-  {% endif %}
+    {% assign assigned_post = page.previous %}
+    {% include post-card.html %}
+   {% endif %}
 
   {% if page.next %}
-    <article class="excerpt">
-      <header>
-        <h3><a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a></h3>
-      </header>
-      <section>
-        {% if page.next.featured_image %}
-          <img src="../images/{{ page.next.featured_image }}" class="fit image" alt="{{page.next.title}}">
-        {% endif %}
-        {{ page.next.content | markdownify | truncatewords: 50, '...' }}
-      </section>
-      <footer>
-        <ul class="actions">
-          <li><a href="{{ page.next.url | relative_url }}" class="button">Read More</a></li>
-        </ul>
-      </footer>
-    </article>
+    {% assign assigned_post = page.next %}
+    {% include post-card.html %}
   {% endif %}
   </div>
 </footer>
+
+<style>
+  .other-stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+  @media (max-width: 500px) {
+    .other-stories {
+      display: block;
+    }
+  }
+</style>
