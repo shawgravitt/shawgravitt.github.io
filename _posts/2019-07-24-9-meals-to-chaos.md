@@ -3,7 +3,7 @@ layout: post
 title:  "9 Meals to Chaos"
 date:   2019-07-24 05:00:00 -0400
 categories: stories
-permalink: /:categories/:title
+permalink: /:title
 featured_image: 9-meals-to-chaos.jpg
 ---
 

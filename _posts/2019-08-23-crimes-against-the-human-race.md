@@ -3,7 +3,7 @@ layout: post
 title:  "Crimes Against the Human Race"
 date:   2019-08-23 05:00:00 -0400
 categories: stories
-permalink: /:categories/:title
+permalink: /:title
 featured_image: crimes-against-the-human-race.jpg
 ---
 

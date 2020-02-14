@@ -3,7 +3,7 @@ layout: post
 title:  "Make Good Art"
 date:   2019-07-13 08:08:08 -0400
 categories: inspiration
-permalink: /:categories/:title
+permalink: /:title
 featured_image: neil-g.jpg
 excerpt: "Neil Gaiman  gives one of the greatest commencement speeches of all time"
 ---

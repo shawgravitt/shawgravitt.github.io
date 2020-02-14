@@ -3,7 +3,7 @@ layout: post
 title:  "The Blacksmith"
 date:   2019-06-25 05:00:00 -0400
 categories: stories
-permalink: /:categories/:title
+permalink: /:title
 featured_image: the-blacksmith.jpg
 image_credit: Photo by [Clark Young](https://unsplash.com/@cbyoung?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 ---
