@@ -6,7 +6,7 @@
   
   {% if page.url == "/" %}
     <div class="header-content">
-      <h1 class="title">
+      <h1 class="title visually-hidden">
         {{ page.title | default: "Shaw Gravitt" }}
       </h1>
       <h2>
@@ -28,7 +28,7 @@
     position: relative;
     max-height: 300px;
     {% if page.url == "/" %}
-      height: 350px;
+      height: 225px;
     {% endif %}
   }
 
