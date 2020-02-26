@@ -1,7 +1,7 @@
 locale: "en-US"
 title: Shaw Gravitt Writes - Stories of near future fiction. # Title of your site
-url: "shawgravitt.com" # the base hostname & protocol for your site
-baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "https://shawgravitt.com" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
 
 # Default description in social shares for the jekyll-seo-tag gem
 description: > # this means to ignore newlines until "baseurl:"
@@ -15,9 +15,18 @@ author:
 
 # Social details for the jekyll-seo-tag gem
 social:
-  name: Shaw Gravitt writer
+  name: Shaw Gravitt
   links:
-    
+    - https://twitter.com/shawgravitt
+    - https://www.facebook.com/shaw.gravitt
+    - https://www.instagram.com/shawncemccraken
+
+twitter:
+  username: shawgravitt
+  card: summary
+
+logo: /images/shwgrvtt-logo.png
+
 colors:
   light: "#ffffff"
   dark: "#313b3f"
@@ -45,12 +54,12 @@ webmaster_verifications:
 include: [".well-known"]
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""      # empty string for all files
       type: posts   # limit to posts
     values:
       is_post: true # automatically set is_post=true for all posts
+      image: /images/avatar.png
 
 
 
